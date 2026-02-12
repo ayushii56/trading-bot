@@ -1,0 +1,21 @@
+=== MARKET ORDER TEST ===
+
+Logging initialized
+Connected to Binance Futures Testnet
+Preparing order: MARKET BTCUSDT BUY
+Sending order request
+Order response received
+Status: NEW
+Order executed successfully
+
+=== LIMIT ORDER TEST ===
+
+Logging initialized
+Connected to Binance Futures Testnet
+Preparing order: LIMIT BTCUSDT SELL @ 65000
+Sending order request
+Order response received
+Status: NEW
+Order executed successfully
+
+These logs demonstrate successful order placement on Binance Futures Testnet.
