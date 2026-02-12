@@ -1,0 +1,107 @@
+/* ===== FULL BACKGROUND IMAGE ===== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("/static/images/main.png") no-repeat center center fixed;
+    background-size: cover;
+
+    height: 100vh;
+}
+
+
+/* ===== FLOATING LEFT PANEL ===== */
+
+.container {
+    width: 400px;
+    margin: 40px;
+
+    padding: 25px;
+    border-radius: 12px;
+
+    /* glass overlay effect */
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+
+/* ===== TYPOGRAPHY ===== */
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 40px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+    color: #111;
+
+    text-shadow:
+        2px 2px 6px rgba(255,255,255,0.7),
+        0 0 10px rgba(255,255,255,0.4);
+}
+
+
+
+/* ===== FORM ===== */
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px;
+
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+/* ===== BUTTON ===== */
+
+button {
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #0f62fe;
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0043ce;
+}
+
+
+/* ===== RESULT BOX ===== */
+
+.result {
+    margin-top: 15px;
+    padding: 10px;
+
+    background: rgba(255,255,255,0.85);
+    border-radius: 6px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+small {
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 12px;
+}

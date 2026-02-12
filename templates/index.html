@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Trading Bot</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h2>Binance Futures Bot</h2>
+
+        <form method="post">
+
+            <label>Symbol</label>
+            <input name="symbol" required>
+            <small>(Format: BTCUSDT — trading pair, no spaces)</small>
+
+
+            <label>Side</label>
+            <select name="side">
+                <option>BUY</option>
+                <option>SELL</option>
+            </select>
+            <small>(BUY = open long position, SELL = open short position)</small>
+
+
+            <label>Order Type</label>
+            <select name="type">
+                <option>MARKET</option>
+                <option>LIMIT</option>
+                <option>STOP_LIMIT</option>
+            </select>
+            <small>
+                MARKET → executes instantly<br>
+                LIMIT → executes at your chosen price<br>
+                STOP_LIMIT → triggers when stop price is hit
+            </small>
+
+
+            <label>Quantity</label>
+            <input name="quantity" required>
+            <small>(Positive number — example: 0.01)</small>
+
+
+            <label>Price</label>
+            <input name="price">
+            <small>(Required for LIMIT & STOP_LIMIT — execution price)</small>
+
+
+            <label>Stop Price</label>
+            <input name="stop-price">
+            <small>(Only for STOP_LIMIT — trigger price)</small>
+
+
+            <button type="submit">Place Order</button>
+
+        </form>
+
+
+        {% if result %}
+        <div class="result">
+            <h3>Order Response</h3>
+            <pre>{{ result }}</pre>
+        </div>
+        {% endif %}
+
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
